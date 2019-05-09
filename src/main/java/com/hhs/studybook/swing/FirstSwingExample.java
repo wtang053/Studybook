@@ -44,7 +44,7 @@ public class FirstSwingExample {
         b.addActionListener(e -> {
             try {
                 ActionResult actionResult = sendGet("http://127.0.0.1/listAllStudents");
-                Student[] students = new Gson().fromJson(actionResult.getData().toString(), Student[].class);
+                Student[] students = new Gson().fromJson(actionResult.getData().toString().trim().replace(", ", ",").replace(" ", "　"), Student[].class);
                 Arrays.sort(students);
                 for (Student s : students) {
                     System.out.println(s.toString());
