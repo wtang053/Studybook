@@ -20,8 +20,8 @@ public class StudentController {
     private StudentDao studentDao;
 
     @RequestMapping(value = "/addstudent", method = RequestMethod.POST)
-    public ActionResult addStudent(@RequestParam("studentName") String studentName, @RequestParam("studentGender") String studentGender, @RequestParam("studentAge") int studentAge) {
-        Student student1 = new Student(studentName, studentGender, studentAge);
+    public ActionResult addStudent(@RequestParam("studentName") String studentName, @RequestParam("studentGender") String studentGender, @RequestParam("studentAge") int studentAge, @RequestParam("studentUsername") String studentUsername, @RequestParam("studentPassword") String studentPassword) {
+        Student student1 = new Student(studentName, studentGender, studentAge, studentUsername, studentPassword);
         studentDao.save(student1);
         return ActionResult.genActionResult(ResultCode.ADD_SUCCESS);
     }
@@ -30,7 +30,7 @@ public class StudentController {
     public ActionResult findStudent(@RequestParam("keyword") String keyword) {
         List<Student> students = studentDao.findByStudentName(keyword);
         if (students == null) {
-            return ActionResult.genActionResult(ResultCode.NO_ELEMENT);
+            return ActionResult.genActionResult(ResultCode.NO_ELEMENT); 
         }
         return ActionResult.genActionResult(ResultCode.CODE_OK, students);
     }
@@ -45,13 +45,17 @@ public class StudentController {
     public ActionResult editStudent(@RequestParam("id") Integer id,
                                     @RequestParam("studentName") String studentName,
                                     @RequestParam("studentGender") String studentGender,
-                                    @RequestParam("studentAge") Integer studentAge) {
+                                    @RequestParam("studentAge") Integer studentAge,
+    								@RequestParam("studentUsername") String studentUsername, 
+    								@RequestParam("studentPassword") String studentPassword){
         Optional<Student> optStudent = studentDao.findById(id);
         if (optStudent.isPresent()) {
             Student student = optStudent.get();
             student.setStudentName(studentName);
             student.setGender(studentGender);
             student.setAge(studentAge);
+            student.setUsername(studentUsername);
+            student.setPassword(studentPassword);
 
             studentDao.saveAndFlush(student);
             return ActionResult.genActionResultByOk();
