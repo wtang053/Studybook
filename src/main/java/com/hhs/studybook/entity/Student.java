@@ -23,6 +23,12 @@ public class Student implements Serializable, Comparable {
 
     @Column(name = "student_age", nullable = false)
     private Integer age;
+    
+    @Column(name = "student_username", nullable = false, length = 400)
+    private String username;
+    
+    @Column(name = "student_password", nullable = false, length = 400) 
+    private String password;
 
     public Student() {
     }
@@ -31,6 +37,16 @@ public class Student implements Serializable, Comparable {
         this.studentName = studentName;
         this.gender = gender;
         this.age = age;
+        this.username = "";
+        this.password = "";
+    }
+    
+    public Student(String studentName, String gender, Integer age, String username, String password) {
+    	this.studentName = studentName;
+    	this.gender = gender;
+    	this.age = age;
+    	this.username = username;
+    	this.password = password;
     }
 
     public Integer getId() {
@@ -63,6 +79,22 @@ public class Student implements Serializable, Comparable {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+    
+    public String getUsername() {
+    	return username;
+    }
+    
+    public String getPassword() {
+    	return password;
+    }
+    
+    public void setUsername(String username) {
+    	this.username = username;
+    }
+    
+    public void setPassword(String password) {
+    	this.password = password;
     }
 
     @Override
