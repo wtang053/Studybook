@@ -96,6 +96,10 @@ public class Student implements Serializable, Comparable {
     public void setPassword(String password) {
     	this.password = password;
     }
+    
+    public void changePassword(String password) {
+    	this.password = password;
+    }
 
     @Override
     public String toString() {
