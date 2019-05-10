@@ -2,9 +2,9 @@ package com.hhs.studybook.util;
 
 public enum ResultCode {
 
-    CODE_OK(200, "成功"),
+    CODE_OK(200, "Success"),
     SIGN_ERROR(404, "Error"),
-    ADD_SUCCESS(233, "添加成功"),
+    ADD_SUCCESS(233, "Add_Success"),
     NO_ELEMENT(123, "Cannot find element in database");
 
     private Integer code;
