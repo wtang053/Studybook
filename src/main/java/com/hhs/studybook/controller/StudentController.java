@@ -30,7 +30,7 @@ public class StudentController {
     public ActionResult findStudent(@RequestParam("keyword") String keyword) {
         List<Student> students = studentDao.findByStudentName(keyword);
         if (students == null) {
-            return ActionResult.genActionResult(ResultCode.NO_ELEMENT);
+            return ActionResult.genActionResult(ResultCode.NO_ELEMENT); 
         }
         return ActionResult.genActionResult(ResultCode.CODE_OK, students);
     }
