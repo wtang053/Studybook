@@ -107,6 +107,7 @@ public class Register extends JFrame {
                                 ex.printStackTrace();
                             }
                         });
+                        JOptionPane.showMessageDialog(null, "Register succesfully");
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
