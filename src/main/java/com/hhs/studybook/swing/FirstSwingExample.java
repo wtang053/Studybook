@@ -33,6 +33,8 @@ public class FirstSwingExample {
             parameters.put("studentName", "S1");
             parameters.put("studentGender", "male");
             parameters.put("studentAge", "11");
+            parameters.put("studentUsername", "admin");
+            parameters.put("studentPassword", "admin");
             try {
                 sendPost("http://127.0.0.1/addstudent", parameters);
             } catch (Exception ex) {
