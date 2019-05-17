@@ -6,21 +6,15 @@ import com.hhs.studybook.util.ActionResult;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.HashMap;
 
 public class Register extends JFrame {
-    private final static String USER_AGENT = "Mozilla/5.0";
+    private final static String USER_AGENT = "Gorilla/5.0";
     private JPanel contentPane;
     private JTextField user;
     private JTextField pass;
@@ -80,41 +74,55 @@ public class Register extends JFrame {
         contentPane.add(class2);
 
         JButton btnCreateAccount = new JButton("Create Account!");
-        btnCreateAccount.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                int i = 0;
-                try {
-                    Class.forName("com.mysql.cj.jdbc.Driver");
-                    Connection con = DriverManager.getConnection("jdbc:mysql://3.14.88.111:3306/studybook", "root", "StudY@BooK!2019");
-                    Statement stmt = con.createStatement();
-                    String sql = "Select * from tb_student where student_username='" + user.getText().toString() + "' and student_password = '" + pass.getText().toString() + "'"; // tbLogin     // Username Password
-                    ResultSet rs = stmt.executeQuery(sql);
-                    if (rs.next()) {
-                        JOptionPane.showMessageDialog(null, "Username exists");
-
-                    } else {
-                        // add the account into the SQL Server
-                        btnCreateAccount.addActionListener(e -> {
-                            HashMap<String, String> parameters = new HashMap<>();
-                            parameters.put("studentName", "S1");
-                            parameters.put("studentGender", "male");
-                            parameters.put("studentAge", "11");
-                            parameters.put("studentUsername", user.getText().toString());
-                            parameters.put("studentPassword", pass.getText().toString());
-                            try {
-                                sendPost("http://127.0.0.1/addstudent", parameters);
-                            } catch (Exception ex) {
-                                ex.printStackTrace();
-                            }
-                        });
-                        JOptionPane.showMessageDialog(null, "Register succesfully");
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+//        btnCreateAccount.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent arg0) {
+//                int i = 0;
+//                try {
+//                    Class.forName("com.mysql.cj.jdbc.Driver");
+//                    Connection con = DriverManager.getConnection("jdbc:mysql://3.14.88.111:3306/studybook", "root", "StudY@BooK!2019");
+//                    Statement stmt = con.createStatement();
+//                    String sql = "Select * from tb_student where student_username='" + user.getText().toString() + "' and student_password = '" + pass.getText().toString() + "'"; // tbLogin     // Username Password
+//                    ResultSet rs = stmt.executeQuery(sql);
+//                    if (rs.next()) {
+//                        JOptionPane.showMessageDialog(null, "Username exists");
+//
+//                    } else {
+//                        // add the account into the SQL Server
+//                        btnCreateAccount.addActionListener(e -> {
+//                            HashMap<String, String> parameters = new HashMap<>();
+//                            parameters.put("studentName", "S1");
+//                            parameters.put("studentGender", "male");
+//                            parameters.put("studentAge", "11");
+//                            parameters.put("studentUsername", user.getText().toString());
+//                            parameters.put("studentPassword", pass.getText().toString());
+//                            try {
+//                                sendPost("http://127.0.0.1/addstudent", parameters);
+//                            } catch (Exception ex) {
+//                                ex.printStackTrace();
+//                            }
+//
+//                        });
+//                        JOptionPane.showMessageDialog(null, "Register succesfully");
+//                    }
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
+        btnCreateAccount.addActionListener(e -> {
+            HashMap<String, String> parameters = new HashMap<>();
+            parameters.put("studentName", "S1");
+            parameters.put("studentGender", "male");
+            parameters.put("studentAge", "11");
+            parameters.put("studentUsername", user.getText().toString());
+            parameters.put("studentPassword", pass.getText().toString());
+            try {
+                sendPost("http://127.0.0.1/addstudent", parameters);
+            } catch (Exception ex) {
+                ex.printStackTrace();
             }
-        });
 
+        });
         btnCreateAccount.setBounds(136, 228, 124, 23);
         contentPane.add(btnCreateAccount);
     }
