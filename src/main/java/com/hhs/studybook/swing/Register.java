@@ -11,6 +11,10 @@ import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.HashMap;
 
 public class Register extends JFrame {
@@ -110,20 +114,36 @@ public class Register extends JFrame {
 //            }
 //        });
 
-
+        //String sql = "Select * from tb_student where student_username='" + user.getText().toString() + "' and student_password = '" + pass.getText().toString() + "'"; // tbLogin     // Username Password
         btnCreateAccount.addActionListener(e -> {
-            HashMap<String, String> parameters = new HashMap<>();
-            parameters.put("studentName", "S1");
-            parameters.put("studentGender", "male");
-            parameters.put("studentAge", "11");
-            parameters.put("studentUsername", user.getText().toString());
-            parameters.put("studentPassword", pass.getText().toString());
             try {
-                sendPost("http://127.0.0.1/addstudent", parameters);
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
+                Class.forName("com.mysql.cj.jdbc.Driver");
 
+                Connection con = DriverManager.getConnection("jdbc:mysql://3.14.88.111:3306/studybook", "root", "StudY@BooK!2019");
+                Statement stmt = con.createStatement();
+                String sql = "Select * from tb_student where student_username='" + user.getText().toString() + "' and student_password = '" + pass.getText().toString() + "'"; // tbLogin     // Username Password
+                ResultSet rs = stmt.executeQuery(sql);
+                if (rs.next()) {
+                    JOptionPane.showMessageDialog(null, "Username exists");
+
+                } else {
+                    HashMap<String, String> parameters = new HashMap<>();
+                    parameters.put("studentName", "S1");
+                    parameters.put("studentGender", "male");
+                    parameters.put("studentAge", "18");
+                    parameters.put("studentUsername", user.getText().toString());
+                    parameters.put("studentPassword", pass.getText().toString());
+
+                    try {
+                        sendPost("http://127.0.0.1/addstudent", parameters);
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            } catch (Exception exc) {
+                exc.printStackTrace();
+
+            }
         });
         btnCreateAccount.setBounds(136, 228, 124, 23);
         contentPane.add(btnCreateAccount);
