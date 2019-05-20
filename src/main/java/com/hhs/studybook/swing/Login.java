@@ -60,6 +60,9 @@ public class Login extends JFrame {
                     if (rs.next()) {
                         JOptionPane.showMessageDialog(null, "Login succesfully");
                     } else {
+                    //	if(sql.equals("")) {
+                    	//	JOptionPane.showMessageDialog(null, "Empty Login");
+                    	//}
                         JOptionPane.showMessageDialog(null, "Login incorrect");
 
                     }
