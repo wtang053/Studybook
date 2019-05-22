@@ -13,6 +13,9 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.HashMap;
 
+/**
+ * This example serves as teaching developers how to use methods to add, delete, edit, and search stuff in database.
+ */
 public class FirstSwingExample {
     private final static String USER_AGENT = "Mozilla/5.0";
 
@@ -74,7 +77,7 @@ public class FirstSwingExample {
 
         BufferedReader in = new BufferedReader(
                 new InputStreamReader(con.getInputStream()));
-        String inputLine; 
+        String inputLine;
         StringBuffer response = new StringBuffer();
 
         while ((inputLine = in.readLine()) != null) {

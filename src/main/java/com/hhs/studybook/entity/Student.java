@@ -33,6 +33,27 @@ public class Student implements Serializable, Comparable {
     @Column(name = "student_password", nullable = false, length = 400)
     private String password;
 
+    @Column(name = "student_class1", nullable = true, length = 30)
+    private String class1;
+
+    @Column(name = "student_class2", nullable = true, length = 30)
+    private String class2;
+
+    @Column(name = "student_class3", nullable = true, length = 30)
+    private String class3;
+
+    @Column(name = "student_class4", nullable = true, length = 30)
+    private String class4;
+
+    @Column(name = "student_class5", nullable = true, length = 30)
+    private String class5;
+
+    @Column(name = "student_class6", nullable = true, length = 30)
+    private String class6;
+
+    @Column(name = "student_class7", nullable = true, length = 30)
+    private String class7;
+
     public Student() {
     }
 
@@ -43,12 +64,19 @@ public class Student implements Serializable, Comparable {
      * @param gender      gender of the student
      * @param age         age of the student
      */
-    public Student(String studentName, String gender, Integer age) {
+    public Student(String studentName, String gender, Integer age, String class1, String class2, String class3, String class4, String class5, String class6, String class7) {
         this.studentName = studentName;
         this.gender = gender;
         this.age = age;
         this.username = "";
         this.password = "";
+        this.class1 = class1;
+        this.class2 = class2;
+        this.class3 = class3;
+        this.class4 = class4;
+        this.class5 = class5;
+        this.class6 = class6;
+        this.class7 = class7;
     }
 
     /**
