@@ -5,11 +5,25 @@ import com.alibaba.fastjson.JSONObject;
 
 import java.io.Serializable;
 
+//
+// Dear maintainer:
+//
+// Once you are done trying to 'optimize' this routine,
+// and have realized what a terrible mistake that was,
+// please increment the following counter as a warning
+// to the next guy:
+//
+// total_hours_wasted_here = 180
+//
 public class ActionResult implements Serializable {
     private Integer code;
     private String message;
     private Object data;
 
+    /**
+     * @param returnCode
+     * @return
+     */
     public static ActionResult genActionResult(ResultCode returnCode) {
         ActionResult actionResult = new ActionResult();
         actionResult.setCode(returnCode.getCode());

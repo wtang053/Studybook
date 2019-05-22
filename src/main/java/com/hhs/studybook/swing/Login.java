@@ -1,5 +1,6 @@
 package com.hhs.studybook.swing;
 
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -95,6 +96,7 @@ public class Login extends JFrame {
      * Launch the application.
      */
     public static void main(String[] args) {
+        //SpringApplication.run(StudybookApplication.class, args);
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
