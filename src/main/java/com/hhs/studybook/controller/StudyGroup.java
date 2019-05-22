@@ -20,6 +20,7 @@ public class StudyGroup extends JFrame{
 	private JButton createGroup;
 	private Student s;
 	private JPanel contentPane;
+	private JPanel classPane;
 	
 	public StudyGroup() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -35,7 +36,7 @@ public class StudyGroup extends JFrame{
         lblcreate.setBounds(21, 11, 403, 73);
         contentPane.add(lblcreate);
         
-        
+         
 		createGroup = new JButton("Create Group!");
 		createGroup.setBackground(Color.LIGHT_GRAY);
 		JPanel right = new JPanel(new GridLayout(1,2));
@@ -56,12 +57,19 @@ public class StudyGroup extends JFrame{
         contentPane.add(createGroup);
         createGroup.addActionListener(new ActionListener() {
         	public void ActionPerformed(ActionEvent arg0) {
-        		try  {
-        			
-        		} catch(Exception e) {
-        			
-        		}
+        	
+        	        CreatedGroup c = new CreatedGroup();
+        	        //c.main(null);
+        		
         	}
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				CreatedGroup c = new CreatedGroup();
+				c.main(null);
+				
+			}
 
         });
 	  	
@@ -70,6 +78,10 @@ public class StudyGroup extends JFrame{
 		
 		
 	}
+	/**
+	 * 
+	 * Launch the application
+	 */
 	 public static void main(String[] args) {
 	        EventQueue.invokeLater(new Runnable() {
 	            public void run() {
