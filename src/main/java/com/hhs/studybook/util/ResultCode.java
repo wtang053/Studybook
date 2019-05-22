@@ -10,19 +10,37 @@ public enum ResultCode {
     private Integer code;
     private String msg;
 
+    /**
+     * Represents
+     *
+     * @param code A number represents a type of information. 200 and 233 represent success; otherwise something's wrong
+     * @param msg  The detailed information.
+     */
     ResultCode(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
     }
 
+    /**
+     * Get the success/error code
+     * @return the success/error code
+     */
     public Integer getCode() {
         return this.code;
     }
 
+    /**
+     * Get the success/error message
+     * @return the success/error message
+     */
     public String getMsg() {
         return this.msg;
     }
 
+    /**
+     * Change the code and msg into a string
+     * @return The string type of the code and the msg
+     */
     @Override
     public String toString() {
         return "code:" + code + ", msg" + msg;

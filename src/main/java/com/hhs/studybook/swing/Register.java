@@ -236,6 +236,12 @@ public class Register extends JFrame {
         });
     }
 
+    /**
+     * GET. Request data from a specified resource.
+     *
+     * @param url The URL of the database
+     * @return
+     */
     private static ActionResult sendGet(String url) throws Exception {
 
         URL obj = new URL(url);
@@ -264,6 +270,12 @@ public class Register extends JFrame {
         return g.fromJson(response.toString(), ActionResult.class);
     }
 
+    /**
+     * POST. Responsible for sending data to a server to create/update a resource
+     *
+     * @param url        the URL of the database
+     * @param parameters Data stored in the database
+     */
     private static void sendPost(String url, HashMap<String, String> parameters) throws Exception {
 
         URL obj = new URL(url);
