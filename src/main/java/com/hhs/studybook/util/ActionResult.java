@@ -20,10 +20,7 @@ public class ActionResult implements Serializable {
     private String message;
     private Object data;
 
-    /**
-     * @param returnCode
-     * @return
-     */
+
     public static ActionResult genActionResult(ResultCode returnCode) {
         ActionResult actionResult = new ActionResult();
         actionResult.setCode(returnCode.getCode());
