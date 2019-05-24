@@ -92,7 +92,6 @@ public class Register extends JFrame {
         JLabel lblClass_6 = new JLabel("Class 7");
         lblClass_6.setBounds(25, 329, 46, 14);
         contentPane.add(lblClass_6);
-
         JComboBox class2 = new JComboBox();
         class2.addItem("EMPTY");
         class2.addItem("MATH");
@@ -140,45 +139,8 @@ public class Register extends JFrame {
         class7.addItem("SCIENCE");
         class7.setBounds(152, 329, 244, 20);
         contentPane.add(class7);
-        
-        JButton btnCreateAccount = new JButton("Create Account!");
-//        btnCreateAccount.addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent arg0) {
-//                int i = 0;
-//                try {
-//                    Class.forName("com.mysql.cj.jdbc.Driver");
-//                    Connection con = DriverManager.getConnection("jdbc:mysql://3.14.88.111:3306/studybook", "root", "StudY@BooK!2019");
-//                    Statement stmt = con.createStatement();
-//                    String sql = "Select * from tb_student where student_username='" + user.getText().toString() + "' and student_password = '" + pass.getText().toString() + "'"; // tbLogin     // Username Password
-//                    ResultSet rs = stmt.executeQuery(sql);
-//                    if (rs.next()) {
-//                        JOptionPane.showMessageDialog(null, "Username exists");
-//
-//                    } else {
-//                        // add the account into the SQL Server
-//                        btnCreateAccount.addActionListener(e -> {
-//                            HashMap<String, String> parameters = new HashMap<>();
-//                            parameters.put("studentName", "S1");
-//                            parameters.put("studentGender", "male");
-//                            parameters.put("studentAge", "11");
-//                            parameters.put("studentUsername", user.getText().toString());
-//                            parameters.put("studentPassword", pass.getText().toString());
-//                            try {
-//                                sendPost("http://127.0.0.1/addstudent", parameters);
-//                            } catch (Exception ex) {
-//                                ex.printStackTrace();
-//                            }
-//
-//                        });
-//                        JOptionPane.showMessageDialog(null, "Register succesfully");
-//                    }
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
 
-        //String sql = "Select * from tb_student where student_username='" + user.getText().toString() + "' and student_password = '" + pass.getText().toString() + "'"; // tbLogin     // Username Password
+        JButton btnCreateAccount = new JButton("Create Account!");//String sql = "Select * from tb_student where student_username='" + user.getText().toString() + "' and student_password = '" + pass.getText().toString() + "'"; // tbLogin     // Username Password
         btnCreateAccount.addActionListener(e -> {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");

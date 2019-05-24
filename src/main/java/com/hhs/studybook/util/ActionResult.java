@@ -13,7 +13,7 @@ import java.io.Serializable;
 // please increment the following counter as a warning
 // to the next guy:
 //
-// total_hours_wasted_here = 180
+// total_hours_wasted_here = 41
 //
 public class ActionResult implements Serializable {
     private Integer code;

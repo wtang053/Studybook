@@ -62,8 +62,6 @@ public class Student implements Serializable, Comparable {
      * A student object with name, gender, and age stored.
      *
      * @param studentName name of the student
-     * @param gender      gender of the student
-     * @param age         age of the student
      */
     public Student(String studentName, String gender, Integer age, String class1, String class2, String class3, String class4, String class5, String class6, String class7) {
         this.studentName = studentName;
@@ -79,6 +77,17 @@ public class Student implements Serializable, Comparable {
         this.class6 = class6;
         this.class7 = class7;
     }
+
+    public Student(String studentName, String gender, Integer age, String username, String password, String class1, String class2) {
+        this.studentName = studentName;
+        this.gender = gender;
+        this.age = age;
+        this.username = username;
+        this.password = password;
+        this.class1 = class1;
+        this.class2 = class2;
+    }
+
 
     /**
      * A student object with username and password included
@@ -213,58 +222,115 @@ public class Student implements Serializable, Comparable {
                 '}';
     }
 
+    /**
+     * Get the student's 1st class
+     *
+     * @return the student's 1st class
+     */
     public String getClass1() {
         return class1;
     }
 
+    /**
+     *  Set the student's 1st class
+     * @param class1 the student's 1st class
+     */
     public void setClass1(String class1) {
         this.class1 = class1;
     }
 
+    /**
+     * Get the student's 2nd class
+     * @return the student's 2nd class
+     */
     public String getClass2() {
         return class2;
     }
 
+    /**
+     * Set the student's 2nd class
+     * @param class2 the 2nd class
+     */
     public void setClass2(String class2) {
         this.class2 = class2;
     }
 
+    /**
+     * Get the student's 3rd class
+     * @return the student's 3rd class
+     */
     public String getClass3() {
         return class3;
     }
 
+    /**
+     * Set the student's 3rd class
+     * @param class3 the 3rd class
+     */
     public void setClass3(String class3) {
         this.class3 = class3;
     }
 
+    /**
+     * Get the student's 4th class
+     * @return the student's 4th class
+     */
     public String getClass4() {
         return class4;
     }
 
+    /**
+     * Set the student's 4th class
+     * @param class4 the 4th class
+     */
     public void setClass4(String class4) {
         this.class4 = class4;
     }
 
+    /**
+     * Get the student's 5th class
+     * @return the student's 5th class
+     */
     public String getClass5() {
         return class5;
     }
 
+    /**
+     * Set the student's 5th class
+     * @param class5 the 5th class
+     */
     public void setClass5(String class5) {
         this.class5 = class5;
     }
 
+    /**
+     * Get the student's 6th class
+     * @return the student's 6th class
+     */
     public String getClass6() {
         return class6;
     }
 
+    /**
+     * Set the student's 6th class
+     * @param class6 the 6th class
+     */
     public void setClass6(String class6) {
         this.class6 = class6;
     }
 
+    /**
+     * Get the student's 7th class
+     * @return the student's 7th class
+     */
     public String getClass7() {
         return class7;
     }
 
+    /**
+     * Set the student's 7th class
+     * @param class7 the 7th class
+     */
     public void setClass7(String class7) {
         this.class7 = class7;
     }

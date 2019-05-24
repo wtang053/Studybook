@@ -11,7 +11,7 @@ public enum ResultCode {
     private String msg;
 
     /**
-     * Represents
+     *
      *
      * @param code A number represents a type of information. 200 and 233 represent success; otherwise something's wrong
      * @param msg  The detailed information.
