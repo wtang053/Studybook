@@ -1,8 +1,12 @@
 package com.hhs.studybook.swing;
 
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+
+import com.hhs.studybook.controller.Logo;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,19 +14,24 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.awt.image.*;
+import java.io.File;
+import java.io.IOException;
 
 public class Login extends JFrame {
 
+	
     private JPanel contentPane;
     private JTextField user;
     private JPasswordField pass;
+    private Image image;
 
     /**
      * Create the frame.
      */
     public Login() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 468, 309);
+        setBounds(100, 100, 468, 609);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
@@ -93,7 +102,16 @@ public class Login extends JFrame {
         });
         btnRegister.setBounds(31, 226, 89, 23);
         contentPane.add(btnRegister);
+      
+        
+		JLabel j = new JLabel(new ImageIcon("file:///Users/waltertang/git/Studybook/lib/logo.png"));
+        j.setBounds(0, 0, 468, 609);
+        contentPane.add(j);
+       
     }
+    
+    
+   
 
     /**
      * Launch the application.
