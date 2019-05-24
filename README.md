@@ -97,18 +97,24 @@ Class list:
 
 Credit list:
 
-	StudybookApplication - Tim
-	StudentController - Walter, Tim
-	StudyGroup -Walter, Tim
-	StudentDAO - Tim
-	Student - Walter
-	Login - Daivic
-	Register - Daivic, Walter, Tim
-	ActionResult - Tim
-	ResultCode - Tim
-	(HomePage) - Daivic
-	(Application.Properities) - Tim
-
+	Classes
+		StudybookApplication - Tim
+		StudentController - Walter, Tim
+		StudyGroup -Walter, Tim
+		StudentDAO - Tim
+		Student - Walter
+		Login - Daivic
+		Register - Daivic, Walter, Tim
+		ActionResult - Tim
+		ResultCode - Tim
+		(HomePage) - Daivic
+		(Application.Properities) - Tim
+	Others
+		Set up a MySQL database - Tim
+		Use Amazon Web Services (AWS) to build a cloud server - Tim
+		Create executable files - Tim
+	
+	
 
 Feedback:
 
