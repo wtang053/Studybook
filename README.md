@@ -14,16 +14,25 @@ Our program is a study assistant which brings together people who have the same 
 
 Instructions: 
 
-Left-Click Register button
-Input username, password, and the classes you have using the dropdown menus
-Left-Click Login
-Re-enter username and password
-On home page, all classes are listed
-Left-Click on a class
-A list of students in that class will appear
-Left-Click “Create Study Group”
-Give description
-Study group will notify all students in that class
+	Left-Click Register button
+
+	Input username, password, and the classes you have using the dropdown menus
+
+	Left-Click Login
+
+	Re-enter username and password
+
+	On home page, all classes are listed
+
+	Left-Click on a class
+	
+	A list of students in that class will appear
+
+	Left-Click “Create Study Group”
+
+	Give description
+
+	Study group will notify all students in that class
 
 
 
@@ -31,40 +40,74 @@ Study group will notify all students in that class
 Features list: 
 
 MUST-DO
-Create a login page
-Create a method to create accounts
-Allow students to add classes when making an account
-Use networking to allow other people who share the same class to appear in their class
-Create a “Study” button
+
+	Create a login page (Done)
+
+	Create a method to create accounts (Done)
+
+	Allow students to add classes when making an account (Done)
+
+	Use networking to allow other people who share the same class to appear in their class (Done)
+
+	Create a “Study” button (Working)
+
+
 WANT-TO
-Have a notification system
-Allow the adding of classes after class is created
-Save login information
-Add a description to study group/be able to create a study group
-Have a clean user interface
+
+	Have a notification system (-)
+
+	Allow the adding of classes after class is created (-)
+
+	Save login information (Done)
+
+	Add a description to study group/be able to create a study group (-)
+
+	Have a clean user interface (Done)
+
+
 STRETCH
-Allow login with school loop username and password
-“Reset Password” and “Forgot Password” Method
-Have “show proficiency” button in own account which states how well you are doing in class
-Be able to link e-mail which notifies when study group forms
-Implement a friends list
+
+	Allow login with school loop username and password (-)
+
+	“Reset Password” and “Forgot Password” Method (-)
+
+	Have “show proficiency” button in own account which states how well you are doing in class (-)
+
+	Be able to link e-mail which notifies when study group forms (-)
+
+	Implement a friends list (-)
+
 
 
 Class list: 
 
-Main
-Drawing Surface
-Classes
-Networking?
-Student
+	StudybookApplication
+	StudentController
+	StudyGroup
+	StudentDAO
+	Student
+	Login
+	Register
+	ActionResult
+	ResultCode
+	(HomePage) (Working)
+	(Application.Properities) (Not a class)
+
 
 
 Credit list: 
-Main
-Drawing Surface
-Classes
-Networking?
-Student
+	StudybookApplication - Tim
+	StudentController - Tim
+	StudyGroup -Walter
+	StudentDAO - Tim
+	Student - Walter
+	Login - Daivic
+	Register - Daivic, Tim
+	ActionResult - Tim
+	ResultCode - Tim
+	(HomePage) - Daivic
+	(Application.Properities) - Tim
+
 
 Feedback:
 We like your idea and would use this in real life :)
