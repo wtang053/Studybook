@@ -49,7 +49,7 @@ MUST-DO
 
 	Use networking to allow other people who share the same class to appear in their class (Done)
 
-	Create a “Study” button (Working)
+	Create a “Study” button (Working on it)
 
 
 WANT-TO
