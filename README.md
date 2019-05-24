@@ -99,7 +99,7 @@ Credit list:
 
 	StudybookApplication - Tim
 	StudentController - Walter, Tim
-	StudyGroup -Walter
+	StudyGroup -Walter, Tim
 	StudentDAO - Tim
 	Student - Walter
 	Login - Daivic
