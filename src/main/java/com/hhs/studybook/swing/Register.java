@@ -61,7 +61,8 @@ public class Register extends JFrame {
         class1.addItem("EMPTY");
         class1.addItem("MATH");
         class1.addItem("ENGLISH");
-        class1.addItem("Science");
+        class1.addItem("SCIENCE");
+        class1.addItem("ELECTIVE");
         class1.setBounds(152, 143, 244, 20);
         contentPane.add(class1);
 
@@ -96,7 +97,8 @@ public class Register extends JFrame {
         class2.addItem("EMPTY");
         class2.addItem("MATH");
         class2.addItem("ENGLISH");
-        class2.addItem("Science");
+        class2.addItem("SCIENCE");
+        class2.addItem("ELECTIVE");
         class2.setBounds(152, 174, 244, 20);
         contentPane.add(class2);
         
@@ -105,6 +107,7 @@ public class Register extends JFrame {
         class3.addItem("MATH");
         class3.addItem("ENGLISH");
         class3.addItem("SCIENCE");
+        class3.addItem("ELECTIVE");
         class3.setBounds(152, 205, 244, 20);
         contentPane.add(class3);
         
@@ -113,6 +116,7 @@ public class Register extends JFrame {
         class4.addItem("MATH");
         class4.addItem("ENGLISH");
         class4.addItem("SCIENCE");
+        class4.addItem("ELECTIVE");
         class4.setBounds(152, 236, 244, 20);
         contentPane.add(class4);
         
@@ -121,6 +125,7 @@ public class Register extends JFrame {
         class5.addItem("MATH");
         class5.addItem("ENGLISH");
         class5.addItem("SCIENCE");
+        class5.addItem("ELECTIVE");
         class5.setBounds(152, 267, 244, 20);
         contentPane.add(class5);
         
@@ -129,6 +134,7 @@ public class Register extends JFrame {
         class6.addItem("MATH");
         class6.addItem("ENGLISH");
         class6.addItem("SCIENCE");
+        class6.addItem("ELECTIVE");
         class6.setBounds(152, 298, 244, 20);
         contentPane.add(class6);
         
@@ -137,6 +143,7 @@ public class Register extends JFrame {
         class7.addItem("MATH");
         class7.addItem("ENGLISH");
         class7.addItem("SCIENCE");
+        class7.addItem("ELECTIVE");
         class7.setBounds(152, 329, 244, 20);
         contentPane.add(class7);
 

@@ -57,6 +57,9 @@ public class Login extends JFrame {
                     Statement stmt = con.createStatement();
                     String sql = "Select * from tb_student where student_username='" + user.getText().toString() + "' and student_password = '" + pass.getText().toString() + "'"; // tbLogin     // Username Password
                     ResultSet rs = stmt.executeQuery(sql);
+                  //  for(int j = 0; j < sql.length(); j++) {
+                    	 //System.out.println("*");
+                  //  }
                     System.out.println(sql);
                     if (rs.next()) {
                         JOptionPane.showMessageDialog(null, "Login succesfully");
