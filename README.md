@@ -90,19 +90,20 @@ Class list:
 	Register
 	ActionResult
 	ResultCode
-	(HomePage) (Working)
+	(HomePage) (Working on it)
 	(Application.Properities) (Not a class)
 
 
 
-Credit list: 
+Credit list:
+
 	StudybookApplication - Tim
-	StudentController - Tim
+	StudentController - Walter, Tim
 	StudyGroup -Walter
 	StudentDAO - Tim
 	Student - Walter
 	Login - Daivic
-	Register - Daivic, Tim
+	Register - Daivic, Walter, Tim
 	ActionResult - Tim
 	ResultCode - Tim
 	(HomePage) - Daivic
