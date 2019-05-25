@@ -61,16 +61,16 @@ public class StudentController {
     /**
      * Find a student based on the keyword typed in
      *
-     * @param keyword The student's name
+     * @param username The student's username
      * @return a student object with the same name
      */
     @RequestMapping(value = "/findstudent", method = RequestMethod.POST)
-    public ActionResult findStudent(@RequestParam("keyword") String keyword) {
-        List<Student> students = studentDao.findByStudentName(keyword);
+    public ActionResult findStudentID(@RequestParam("keyword") String username) {
+        List<Student> students = studentDao.findByUserName(username);
         if (students == null) {
             return ActionResult.genActionResult(ResultCode.NO_ELEMENT);
         }
-        return ActionResult.genActionResult(ResultCode.CODE_OK, students);
+        return ActionResult.genActionResult(ResultCode.CODE_OK, students.get(0).getId());
     }
 
     /**

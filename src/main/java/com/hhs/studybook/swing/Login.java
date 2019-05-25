@@ -1,6 +1,7 @@
 package com.hhs.studybook.swing;
 
 
+import com.hhs.studybook.util.ActionResult;
 import com.hhs.studybook.util.SwingUtil;
 
 import javax.swing.*;
@@ -54,12 +55,20 @@ public class Login extends JFrame {
                 String username = user.getText();
                 String password = String.valueOf(pass.getPassword());
                 HashMap<String, String> parameters = new HashMap<>();
+                parameters.put("keyword", username);
+                ActionResult actionResult = SwingUtil.getFromPost(SwingUtil.SERVER_URL + "findstudent", parameters);
+                int studentId = (int) Double.parseDouble(actionResult.getData().toString());
+
+
                 parameters.put("studentUsername", username);
                 parameters.put("studentPassword", password);
 
-                int code = SwingUtil.sendPost("http://127.0.0.1:8080/login", parameters);
+                int code = SwingUtil.sendPost(SwingUtil.SERVER_URL + "login", parameters);
                 if (code == 234) {
                     JOptionPane.showMessageDialog(this, "Logged in");
+                    RoomSelection frame = new RoomSelection(studentId);
+                    frame.setVisible(true);
+                    this.dispose();
                 } else if (code == 410) {
                     JOptionPane.showMessageDialog(this, "Login failed, please check your username and password");
                 } else {

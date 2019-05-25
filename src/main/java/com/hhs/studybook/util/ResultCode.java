@@ -9,7 +9,7 @@ public enum ResultCode {
     LOGIN_SUCCESS(234, "Login success"),
     LOGIN_FAIL(410, "Login fail"),
     USERNAME_EXIST(411, "Username exist"),
-
+    PARA_ERROR(412, "Parameter error")
     ;
 
     private Integer code;

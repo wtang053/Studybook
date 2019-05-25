@@ -92,7 +92,7 @@ public class Register extends JFrame {
                 parameters.put("studentPassword", String.valueOf(pass.getPassword()));
 
                 try {
-                    int code = SwingUtil.sendPost("http://127.0.0.1:8080/addstudent", parameters);
+                    int code = SwingUtil.sendPost(SwingUtil.SERVER_URL + "addstudent", parameters);
                     if (code == 233) {
                         JOptionPane.showMessageDialog(this, "Account created");
                         this.dispose();

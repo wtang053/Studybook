@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface StudentDao extends JpaRepository<Student, Integer> {
-    @Query("select s from Student s where s.studentName = ?1")
-    List<Student> findByStudentName(String studentName);
+    @Query("select s from Student s where s.username = ?1")
+    List<Student> findByUserName(String userName);
 }
