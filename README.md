@@ -124,9 +124,12 @@ Credit list:
 		ResultCode - Tim
 		Swingutil - Tim
 	Others
+		Powerpoint - Walter
+		UML - Walter
 		Set up a MySQL database - Tim
 		Use Amazon Web Services (AWS) to build a cloud server - Tim
 		Create executable files - Tim
+		
 	
 	Well I am not responsible for everything but I am asked for it so :)
 
