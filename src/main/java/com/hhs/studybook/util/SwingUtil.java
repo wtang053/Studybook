@@ -1,66 +1,25 @@
-package com.hhs.studybook.swing;
+package com.hhs.studybook.util;
 
 import com.google.gson.Gson;
-import com.hhs.studybook.entity.Student;
-import com.hhs.studybook.util.ActionResult;
 
-import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Arrays;
 import java.util.HashMap;
 
-/**
- * This example serves as teaching developers how to use methods to add, delete, edit, and search stuff in database.
- */
-public class FirstSwingExample {
-    private final static String USER_AGENT = "Mozilla/5.0";
+public class SwingUtil {
 
-    public static void main(String[] args) {
-        JFrame f = new JFrame();//creating instance of JFrame
-        JButton b_add = new JButton("AddStudent");//creating instance of JButton
-        b_add.setBounds(100, 100, 100, 40);
-        JButton b = new JButton("List Students");//creating instance of JButton
-        b.setBounds(130, 100, 100, 40);//x axis, y axis, width, height
-        f.add(b);//adding button in JFrame
-        f.add(b_add);
-        f.setSize(400, 500);//400 width and 500 height
-        f.setLayout(null);//using no layout managers
-        f.setVisible(true);//making the frame visible
+    private final static String USER_AGENT = "Gorilla/5.0";
 
-        b_add.addActionListener(e -> {
-            HashMap<String, String> parameters = new HashMap<>();
-            parameters.put("studentName", "S1");
-            parameters.put("studentGender", "male");
-            parameters.put("studentAge", "11");
-            parameters.put("studentUsername", "admin");
-            parameters.put("studentPassword", "admin");
-            try {
-                sendPost("http://127.0.0.1/addstudent", parameters);
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-
-        });
-
-        b.addActionListener(e -> {
-            try {
-                ActionResult actionResult = sendGet("http://127.0.0.1/listAllStudents");
-                Student[] students = new Gson().fromJson(actionResult.getData().toString().trim().replace(", ", ",").replace(" ", "　"), Student[].class);
-                Arrays.sort(students);
-                for (Student s : students) {
-                    System.out.println(s.toString());
-                }
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-        });
-    }
-
-    private static ActionResult sendGet(String url) throws Exception {
+    /**
+     * GET. Request data from a specified resource.
+     *
+     * @param url The URL of the database
+     * @return
+     */
+    public static ActionResult sendGet(String url) throws Exception {
 
         URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -88,7 +47,14 @@ public class FirstSwingExample {
         return g.fromJson(response.toString(), ActionResult.class);
     }
 
-    private static void sendPost(String url, HashMap<String, String> parameters) throws Exception {
+    /**
+     * POST. Responsible for sending data to a server to create/update a resource
+     *
+     * @param url        the URL of the database
+     * @param parameters Data stored in the database
+     * @return response code
+     */
+    public static int sendPost(String url, HashMap<String, String> parameters) throws Exception {
 
         URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -104,7 +70,6 @@ public class FirstSwingExample {
             urlParameters += key + "=" + value + "&";
         }
         urlParameters.substring(0, urlParameters.length() - 1);
-
         // Send post request
         con.setDoOutput(true);
         DataOutputStream wr = new DataOutputStream(con.getOutputStream());
@@ -130,5 +95,7 @@ public class FirstSwingExample {
         //print result
         System.out.println(response.toString());
 
+        String returnTemp = response.substring(response.indexOf("\"code\":") + "\"code\":".length());
+        return Integer.parseInt(returnTemp.substring(0, returnTemp.indexOf(",")));
     }
 }

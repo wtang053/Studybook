@@ -5,7 +5,12 @@ public enum ResultCode {
     CODE_OK(200, "Success"),
     SIGN_ERROR(404, "Error"),
     ADD_SUCCESS(233, "Add_Success"),
-    NO_ELEMENT(123, "Cannot find element in database");
+    NO_ELEMENT(123, "Cannot find element in database"),
+    LOGIN_SUCCESS(234, "Login success"),
+    LOGIN_FAIL(410, "Login fail"),
+    USERNAME_EXIST(411, "Username exist"),
+
+    ;
 
     private Integer code;
     private String msg;

@@ -63,7 +63,8 @@ public class Student implements Serializable, Comparable {
      *
      * @param studentName name of the student
      */
-    public Student(String studentName, String gender, Integer age, String class1, String class2, String class3, String class4, String class5, String class6, String class7) {
+    public Student(String studentName, String gender, Integer age, String class1, String class2, String class3,
+                   String class4, String class5, String class6, String class7) {
         this.studentName = studentName;
         this.gender = gender;
         this.age = age;
@@ -78,7 +79,8 @@ public class Student implements Serializable, Comparable {
         this.class7 = class7;
     }
 
-    public Student(String studentName, String gender, Integer age, String username, String password, String class1, String class2) {
+    public Student(String studentName, String gender, Integer age, String username, String password, String class1,
+                   String class2, String class3, String class4, String class5, String class6, String class7) {
         this.studentName = studentName;
         this.gender = gender;
         this.age = age;
@@ -86,16 +88,23 @@ public class Student implements Serializable, Comparable {
         this.password = password;
         this.class1 = class1;
         this.class2 = class2;
+        this.class3 = class3;
+        this.class4 = class4;
+        this.class5 = class5;
+        this.class6 = class6;
+        this.class7 = class7;
+
     }
 
 
     /**
      * A student object with username and password included
+     *
      * @param studentName Name of the student
-     * @param gender Gender of the student
-     * @param age Age of the student
-     * @param username the student's username
-     * @param password the student's password
+     * @param gender      Gender of the student
+     * @param age         Age of the student
+     * @param username    the student's username
+     * @param password    the student's password
      */
     public Student(String studentName, String gender, Integer age, String username, String password) {
         this.studentName = studentName;
@@ -107,6 +116,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Return the student's ID
+     *
      * @return the ID of the student. Every student has its unique ID, even though it is not shown to the user.
      */
     public Integer getId() {
@@ -115,6 +125,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Change the student's ID
+     *
      * @param id The student's ID
      */
     public void setId(Integer id) {
@@ -123,6 +134,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Get a student's name
+     *
      * @return the student's name
      */
     public String getStudentName() {
@@ -131,6 +143,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Change a student's name
+     *
      * @param studentName the student's name
      */
     public void setStudentName(String studentName) {
@@ -139,6 +152,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Get the student's gender
+     *
      * @return the gender of the student
      */
     public String getGender() {
@@ -146,8 +160,8 @@ public class Student implements Serializable, Comparable {
     }
 
     /**
-     *
      * Change the student's gender
+     *
      * @param gender the student's gender
      */
     public void setGender(String gender) {
@@ -155,8 +169,8 @@ public class Student implements Serializable, Comparable {
     }
 
     /**
-     *
      * Get the age of the student
+     *
      * @return The age of the student
      */
     public Integer getAge() {
@@ -165,6 +179,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Change the age of the student
+     *
      * @param age The age of the student
      */
     public void setAge(Integer age) {
@@ -173,6 +188,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Get the student's username
+     *
      * @return the username
      */
     public String getUsername() {
@@ -181,6 +197,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Set a username
+     *
      * @param username the student's username
      */
     public void setUsername(String username) {
@@ -198,6 +215,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Set a password
+     *
      * @param password you know that
      */
     public void setPassword(String password) {
@@ -206,6 +224,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Change the password
+     *
      * @param password the new password
      */
     public void changePassword(String password) {
@@ -232,7 +251,8 @@ public class Student implements Serializable, Comparable {
     }
 
     /**
-     *  Set the student's 1st class
+     * Set the student's 1st class
+     *
      * @param class1 the student's 1st class
      */
     public void setClass1(String class1) {
@@ -241,6 +261,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Get the student's 2nd class
+     *
      * @return the student's 2nd class
      */
     public String getClass2() {
@@ -249,6 +270,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Set the student's 2nd class
+     *
      * @param class2 the 2nd class
      */
     public void setClass2(String class2) {
@@ -257,6 +279,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Get the student's 3rd class
+     *
      * @return the student's 3rd class
      */
     public String getClass3() {
@@ -265,6 +288,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Set the student's 3rd class
+     *
      * @param class3 the 3rd class
      */
     public void setClass3(String class3) {
@@ -273,6 +297,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Get the student's 4th class
+     *
      * @return the student's 4th class
      */
     public String getClass4() {
@@ -281,6 +306,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Set the student's 4th class
+     *
      * @param class4 the 4th class
      */
     public void setClass4(String class4) {
@@ -289,6 +315,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Get the student's 5th class
+     *
      * @return the student's 5th class
      */
     public String getClass5() {
@@ -297,6 +324,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Set the student's 5th class
+     *
      * @param class5 the 5th class
      */
     public void setClass5(String class5) {
@@ -305,6 +333,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Get the student's 6th class
+     *
      * @return the student's 6th class
      */
     public String getClass6() {
@@ -313,6 +342,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Set the student's 6th class
+     *
      * @param class6 the 6th class
      */
     public void setClass6(String class6) {
@@ -321,6 +351,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Get the student's 7th class
+     *
      * @return the student's 7th class
      */
     public String getClass7() {
@@ -329,6 +360,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Set the student's 7th class
+     *
      * @param class7 the 7th class
      */
     public void setClass7(String class7) {
@@ -337,6 +369,7 @@ public class Student implements Serializable, Comparable {
 
     /**
      * Compare the students' ID. Return 0 if the ID matches.
+     *
      * @param o the other student
      * @return the numerical difference of the students' ID
      */

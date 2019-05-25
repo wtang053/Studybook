@@ -1,26 +1,18 @@
 package com.hhs.studybook.swing;
 
 
-import javax.imageio.ImageIO;
+import com.hhs.studybook.util.SwingUtil;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-
-import com.hhs.studybook.controller.Logo;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.awt.image.*;
-import java.io.File;
-import java.io.IOException;
+import java.util.HashMap;
 
 public class Login extends JFrame {
 
-	
+
     private JPanel contentPane;
     private JTextField user;
     private JPasswordField pass;
@@ -57,33 +49,24 @@ public class Login extends JFrame {
         contentPane.add(lblPassword);
 
         JButton btnLogin = new JButton("LOGIN");
-        btnLogin.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                int i = 0;
-                try {
-                    Class.forName("com.mysql.cj.jdbc.Driver");
-                    Connection con = DriverManager.getConnection("jdbc:mysql://3.14.88.111:3306/studybook", "root", "StudY@BooK!2019");
-                    Statement stmt = con.createStatement();
-                    String sql = "Select * from tb_student where student_username='" + user.getText().toString() + "' and student_password = '" + pass.getText().toString() + "'"; // tbLogin     // Username Password
-                    ResultSet rs = stmt.executeQuery(sql);
-                  //  for(int j = 0; j < sql.length(); j++) {
-                    	 //System.out.println("*");
-                  //  }
-                    System.out.println(sql);
-                    if (rs.next()) {
-                        JOptionPane.showMessageDialog(null, "Login succesfully");
-                    } else {
-                    //	if(sql.equals("")) {
-                    	//	JOptionPane.showMessageDialog(null, "Empty Login");
-                    	//}
-                        JOptionPane.showMessageDialog(null, "Login incorrect");
+        btnLogin.addActionListener(e -> {
+            try {
+                String username = user.getText();
+                String password = String.valueOf(pass.getPassword());
+                HashMap<String, String> parameters = new HashMap<>();
+                parameters.put("studentUsername", username);
+                parameters.put("studentPassword", password);
 
-                    }
-                    con.close();
-
-                } catch (Exception e) {
-                    System.out.print(e);
+                int code = SwingUtil.sendPost("http://127.0.0.1:8080/login", parameters);
+                if (code == 234) {
+                    JOptionPane.showMessageDialog(this, "Logged in");
+                } else if (code == 410) {
+                    JOptionPane.showMessageDialog(this, "Login failed, please check your username and password");
+                } else {
+                    JOptionPane.showMessageDialog(this, "Login failed, please check your network status");
                 }
+            } catch (Exception ex) {
+                System.out.print(ex);
             }
         });
         btnLogin.setBounds(335, 226, 89, 23);
@@ -91,6 +74,7 @@ public class Login extends JFrame {
 
         pass = new JPasswordField();
         pass.setBounds(31, 192, 393, 28);
+        pass.setEchoChar('*');
         contentPane.add(pass);
 
         JButton btnRegister = new JButton("REGISTER");
@@ -102,16 +86,14 @@ public class Login extends JFrame {
         });
         btnRegister.setBounds(31, 226, 89, 23);
         contentPane.add(btnRegister);
-      
-        
-		JLabel j = new JLabel(new ImageIcon("file:///Users/waltertang/git/Studybook/lib/logo.png"));
+
+
+        JLabel j = new JLabel(new ImageIcon("file:///Users/waltertang/git/Studybook/lib/logo.png"));
         j.setBounds(0, 0, 468, 609);
         contentPane.add(j);
-       
+
     }
-    
-    
-   
+
 
     /**
      * Launch the application.
