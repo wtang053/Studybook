@@ -82,15 +82,25 @@ STRETCH
 Class list: 
 
 	StudybookApplication
+	controller.Chatroom
 	StudentController
-	StudyGroup
+	ElectiveRoomDAO
+	EnglishRoomDAO
+	MathRoomDAO
+	ScienceRoomDAO
 	StudentDAO
+	ElectiveChatRoom
+	EnglishChatRoom
+	MathChatRoom
+	ScienceChatRoom
+	swing.Chatroom
 	Student
 	Login
 	Register
+	RoomSelection
 	ActionResult
 	ResultCode
-	(HomePage) (Working on it)
+	Swingutil
 	(Application.Properities) (Not a class)
 
 
@@ -99,22 +109,31 @@ Credit list:
 
 	Classes
 		StudybookApplication - Tim
-		StudentController - Walter, Tim
-		StudyGroup -Walter, Tim
+		controller.Chatroom - Tim
+		StudentController - Tim
+		ElectiveRoomDAO - Tim
+		EnglishRoomDAO - Tim
+		MathRoomDAO - Tim
+		ScienceRoomDAO - Tim
 		StudentDAO - Tim
+		ElectiveChatRoom - Tim
+		EnglishChatRoom - Tim
+		MathChatRoom - Tim
+		ScienceChatRoom - Tim
+		swing.Chatroom - Tim
 		Student - Walter
-		Login - Daivic
-		Register - Daivic, Walter, Tim
+		Login - Daivic, Tim
+		Register - Daivic, Tim
+		RoomSelection - Tim
 		ActionResult - Tim
 		ResultCode - Tim
-		(HomePage) - Daivic
-		(Application.Properities) - Tim
+		Swingutil - Tim
 	Others
 		Set up a MySQL database - Tim
 		Use Amazon Web Services (AWS) to build a cloud server - Tim
 		Create executable files - Tim
 	
-	
+	Is it my responsibility to to everything?
 
 Feedback:
 
