@@ -14,7 +14,7 @@ public class StudybookApplication {
             if (arg.equals("-client"))
                 isClient = true;
         }
-        if (!isClient) {
+        if (isClient) {
             SpringApplication.run(StudybookApplication.class, args);
         } else {
             Login frame = new Login();
