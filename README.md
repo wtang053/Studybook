@@ -14,9 +14,11 @@ Our program is a study assistant which brings together people who have the same 
 
 Instructions: 
 
+	Double click Client.jar
+
 	Left-Click Register button
 
-	Input username, password, and the classes you have using the dropdown menus
+	Input username, password
 
 	Left-Click Login
 
@@ -24,15 +26,9 @@ Instructions:
 
 	On home page, all classes are listed
 
-	Left-Click on a class
-	
-	A list of students in that class will appear
+	Left-Click on a class (chat room)
 
-	Left-Click “Create Study Group”
-
-	Give description
-
-	Study group will notify all students in that class
+	Studdents can talk with each other in the chat room
 
 
 
@@ -49,7 +45,7 @@ MUST-DO
 
 	Use networking to allow other people who share the same class to appear in their class (Done)
 
-	Create a “Study” button (Working on it)
+	Create a “Study” button (Done in another way)
 
 
 WANT-TO
@@ -101,7 +97,6 @@ Class list:
 	ActionResult
 	ResultCode
 	Swingutil
-	(Application.Properities) (Not a class)
 
 
 
@@ -133,7 +128,7 @@ Credit list:
 		Use Amazon Web Services (AWS) to build a cloud server - Tim
 		Create executable files - Tim
 	
-	
+	Well I am not responsible for everything but I am asked for it so :)
 
 Feedback:
 
