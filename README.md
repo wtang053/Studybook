@@ -133,7 +133,7 @@ Credit list:
 		Use Amazon Web Services (AWS) to build a cloud server - Tim
 		Create executable files - Tim
 	
-	Is it my responsibility to to everything?
+	
 
 Feedback:
 
