@@ -14,9 +14,11 @@ Our program is a study assistant which brings together people who have the same 
 
 Instructions: 
 
+	Double click Client.jar
+
 	Left-Click Register button
 
-	Input username, password, and the classes you have using the dropdown menus
+	Input username, password
 
 	Left-Click Login
 
@@ -24,15 +26,9 @@ Instructions:
 
 	On home page, all classes are listed
 
-	Left-Click on a class
-	
-	A list of students in that class will appear
+	Left-Click on a class (chat room)
 
-	Left-Click “Create Study Group”
-
-	Give description
-
-	Study group will notify all students in that class
+	Studdents can talk with each other in the chat room
 
 
 
@@ -49,7 +45,7 @@ MUST-DO
 
 	Use networking to allow other people who share the same class to appear in their class (Done)
 
-	Create a “Study” button (Working on it)
+	Create a “Study” button (Done in another way)
 
 
 WANT-TO
@@ -82,16 +78,25 @@ STRETCH
 Class list: 
 
 	StudybookApplication
+	controller.Chatroom
 	StudentController
-	StudyGroup
+	ElectiveRoomDAO
+	EnglishRoomDAO
+	MathRoomDAO
+	ScienceRoomDAO
 	StudentDAO
+	ElectiveChatRoom
+	EnglishChatRoom
+	MathChatRoom
+	ScienceChatRoom
+	swing.Chatroom
 	Student
 	Login
 	Register
+	RoomSelection
 	ActionResult
 	ResultCode
-	(HomePage) (Working on it)
-	(Application.Properities) (Not a class)
+	Swingutil
 
 
 
@@ -99,22 +104,34 @@ Credit list:
 
 	Classes
 		StudybookApplication - Tim
-		StudentController - Walter, Tim
-		StudyGroup -Walter, Tim
+		controller.Chatroom - Tim
+		StudentController - Tim
+		ElectiveRoomDAO - Tim
+		EnglishRoomDAO - Tim
+		MathRoomDAO - Tim
+		ScienceRoomDAO - Tim
 		StudentDAO - Tim
+		ElectiveChatRoom - Tim
+		EnglishChatRoom - Tim
+		MathChatRoom - Tim
+		ScienceChatRoom - Tim
+		swing.Chatroom - Tim
 		Student - Walter
-		Login - Daivic
-		Register - Daivic, Walter, Tim
+		Login - Daivic, Tim
+		Register - Daivic, Tim
+		RoomSelection - Tim
 		ActionResult - Tim
 		ResultCode - Tim
-		(HomePage) - Daivic
-		(Application.Properities) - Tim
+		Swingutil - Tim
 	Others
+		Powerpoint - Walter
+		UML - Walter
 		Set up a MySQL database - Tim
 		Use Amazon Web Services (AWS) to build a cloud server - Tim
 		Create executable files - Tim
+		
 	
-	
+	Well I am not responsible for everything but I am asked for it so :)
 
 Feedback:
 
