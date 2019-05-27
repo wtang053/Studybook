@@ -28,7 +28,7 @@ Instructions:
 
 	Left-Click on a class (chat room)
 
-	Studdents can talk with each other in the chat room
+	Students can talk with each other in the chat room
 
 
 
@@ -56,7 +56,7 @@ WANT-TO
 
 	Save login information (Done)
 
-	Add a description to study group/be able to create a study group (-)
+	Add a description to study group/be able to create a study group (Done)
 
 	Have a clean user interface (Done)
 
@@ -126,6 +126,7 @@ Credit list:
 	Others
 		Powerpoint - Walter
 		UML - Walter
+		Javadoc - Walter
 		Set up a MySQL database - Tim
 		Use Amazon Web Services (AWS) to build a cloud server - Tim
 		Create executable files - Tim
