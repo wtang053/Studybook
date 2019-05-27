@@ -6,6 +6,11 @@ import java.awt.*;
 public class RoomSelection extends JFrame {
     private Integer userId;
 
+    /**
+     * Four buttons (Math, Science, English, and Elective chat room)
+     *
+     * @param userId Student ID
+     */
     public RoomSelection(Integer userId) {
         this.userId = userId;
 

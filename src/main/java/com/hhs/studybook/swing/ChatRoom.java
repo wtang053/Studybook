@@ -26,6 +26,13 @@ public class ChatRoom {
 
 
     // 构造方法
+
+    /**
+     * Home page of the program
+     *
+     * @param roomTitle One of the four chat rooms (Math, Science, English, or Elective)
+     * @param userId    Student ID
+     */
     public ChatRoom(String roomTitle, Integer userId) {
         textArea = new JTextArea();
         textArea.setEditable(false);
@@ -125,6 +132,7 @@ public class ChatRoom {
     }
 
     // 主方法,程序入口
+    // Test case
     public static void main(String[] args) {
         new ChatRoom("Math", 1);
     }

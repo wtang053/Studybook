@@ -187,6 +187,11 @@ public class Student implements Serializable {
         this.password = password;
     }
 
+    /**
+     * String type of a student object
+     *
+     * @return Information of a student, including ID, student name, gender, and age.
+     */
     @Override
     public String toString() {
         return "Student{" +

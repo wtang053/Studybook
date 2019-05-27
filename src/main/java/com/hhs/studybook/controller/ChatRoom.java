@@ -34,6 +34,12 @@ public class ChatRoom {
     @Autowired
     private ScienceRoomDao scienceRoomDao;
 
+    /**
+     * Get all sent information in a chat room
+     *
+     * @param roomTitle The room name the maintainer wants to get all the sent chat from
+     * @return All texts from the chat room
+     */
     @RequestMapping(value = "getAllChats", method = RequestMethod.POST)
     public ActionResult getAllChats(@RequestParam("roomTitle") String roomTitle) {
         List result = null;
@@ -49,6 +55,13 @@ public class ChatRoom {
         return ActionResult.genActionResult(ResultCode.CODE_OK, result);
     }
 
+    /**
+     * Send a text in a chat room
+     * @param roomTitle The name of the chat room
+     * @param userId Id of the user
+     * @param chatText the text the user wants to send
+     * @return The text the user wants to send to the chat room
+     */
     @RequestMapping(value = "addChat", method = RequestMethod.POST)
     public ActionResult addChat(@RequestParam("roomTitle") String roomTitle, @RequestParam("userId") Integer userId,
                                 @RequestParam("chatText") String chatText) {
@@ -66,24 +79,40 @@ public class ChatRoom {
         return ActionResult.genActionResultByOk();
     }
 
+    /**
+     * Clear all texts from the Math chat room (for maintainers use only)
+     * @return blank
+     */
     @RequestMapping(value = "clearMath", method = RequestMethod.GET)
     public ActionResult clearMath() {
         mathRoomDao.deleteAll();
         return ActionResult.genActionResultByOk();
     }
 
+    /**
+     * Clear all texts from the English chat room (for maintainers use only)
+     * @return blank
+     */
     @RequestMapping(value = "clearEnglish", method = RequestMethod.GET)
     public ActionResult clearEnglish() {
         englishRoomDao.deleteAll();
         return ActionResult.genActionResultByOk();
     }
 
+    /**
+     * Clear all texts from the Science chat room (for maintainers use only)
+     * @return blank
+     */
     @RequestMapping(value = "clearScience", method = RequestMethod.GET)
     public ActionResult clearScience() {
         scienceRoomDao.deleteAll();
         return ActionResult.genActionResultByOk();
     }
 
+    /**
+     * Clear all texts from the Elective chat room (for maintainers use only)
+     * @return blank
+     */
     @RequestMapping(value = "clearElective", method = RequestMethod.GET)
     public ActionResult clearElective() {
         electiveRoomDao.deleteAll();
