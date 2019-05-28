@@ -142,8 +142,6 @@ Credit list:
 		Spring Framework
 		
 		
-	
-	Well I am not responsible for everything but I am asked for it so :)
 
 Feedback:
 
