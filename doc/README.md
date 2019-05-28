@@ -130,6 +130,9 @@ Credit list:
 		Set up a MySQL database - Tim
 		Use Amazon Web Services (AWS) to build a cloud server - Tim
 		Create executable files - Tim
+	OutSide Resources/Helps
+		Tom Liu - University of Washington
+		
 		
 	
 	Well I am not responsible for everything but I am asked for it so :)
