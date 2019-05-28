@@ -123,15 +123,23 @@ Credit list:
 		ActionResult - Tim
 		ResultCode - Tim
 		Swingutil - Tim
+		
 	Others
 		Powerpoint - Walter
 		UML - Walter
 		Javadoc - Walter
 		Set up a MySQL database - Tim
 		Use Amazon Web Services (AWS) to build a cloud server - Tim
-		Create executable files - Tim
-	OutSide Resources/Helps
-		Tom Liu - University of Washington
+		Create an executable file - Tim
+		
+	External Helps
+		Tom Liu - sophomore from University of Washington
+		
+	External Resources
+		Alibaba JSON
+		Google JSON
+		MySQL Connector
+		Spring Framework
 		
 		
 	
